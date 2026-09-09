@@ -1,0 +1,27 @@
+.cuadro {
+    width: 100%;
+    height: 250px;
+    background-color: #000000;
+    display: flex;
+}
+
+
+.cuadro1 {
+    width: 250px;
+    height: 250px;
+    background-color: #ff0101;
+    border-radius: 25px;
+}
+
+.cuadro2 {
+    width: 250px;
+    height: 250px;
+    background-color: #ffe601;
+    border-radius: 25px;
+}
+
+
+body {
+    margin: 0;
+}
+
