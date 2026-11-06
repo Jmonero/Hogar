@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+
+        <div class="content">
+            <div class="botones">
+                <button onclick="nombre()" class="btn">Nombre</button>
+                <button onclick="materiafav()" class="btn">Materia Fav</button>
+                <button onclick="frase()" class="btn">Frase Mía</button>
+                <button onclick="verConteo()" class="btn">¿Cuántos mensajes leíste?</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: radial-gradient(#ffffff,#000205);
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .contenedor{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .botones{
+            display: flex;
+            padding: 40px;
+        }
+        .btn{
+            margin: 10px;
+            width: 170px;
+            height: 75px;
+            background: #050202;
+            color: #fff;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.1s;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5 );
+
+        }
+        .btn:hover{
+            transform: scale(1.1);
+        }
+        .btn:active{
+            background: #060307;
+            transform: scale(0.85);
+            }
+    </style>
+    <script>
+        let conteo = 0;
+
+        function nombre(){
+            conteo++;
+            alert("Mi nombre es Jose Manuel Monero Herrera");
+        }
+        function materiafav(){
+            conteo++;
+            alert("Mis materias favoritas son Ciencias Sociales, Lengua Española y Matematicas");
+        }
+        function frase(){
+            conteo++;
+            alert("Confía en el proceso, todo llega a su tiempo");
+        }
+        function verConteo(){
+            if (conteo === 1){
+                alert("Llevas 1 mensaje")
+            }
+            else{
+                alert("Llevas "+ conteo +" mensajes");
+            }
+            
+        }
+    </script>
+</body>
+</html>

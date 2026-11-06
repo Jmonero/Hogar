@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #eef2f7;
+        }
+
+
+        input {
+            width: 100%;
+            height: 30px;
+            border: none;
+            border-bottom: 2px solid #010305;
+            outline: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: #010305;
+            background: transparent;
+        }
+
+        .carnet {
+            display: flex;
+            width: 600px;
+            max-width: 95%;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .franja {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(160deg, #000308, #03070e);
+            color: #fff;
+            font-size: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .datos {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        input:focus {
+            border-bottom-color: #010305;
+        }
+        button {
+            height: 25px;
+            width: 100px;
+            border: none;
+            border-radius: 8px;
+            background: #050101;
+            color: #fdfdfd;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.2s;
+            align-self: center;
+        }
+        button:active {
+            transform: scale(0.96);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="carnet">
+            <div class="franja">
+                <span>Calcula tu promedio</span>
+            </div>
+
+            <div class="datos">
+                <input id="nomEst" type="text" placeholder="Nombre" spellcheck="false">
+                <input id="numEst" type="text" placeholder="Numero de estudiante" spellcheck="false">
+                <input id="correoEst" type="email" placeholder="Correo" spellcheck="false">
+                <input id="promedioEst" type="number" placeholder="Introduce tu promedio" spellcheck="false">
+                <button onclick="registrar()">Registrar</button>
+            </div>
+        </div>
+    <script>
+            function registrar() {
+                const nombre = document.getElementById("nomEst").value;
+                const numero = document.getElementById("numEst").value;
+                const correo = document.getElementById("correoEst").value;
+                const promedio = document.getElementById("promedioEst").value;
+                    if (nombre.trim() === ""){
+                        alert ("Introduce tu nombre")
+                    }
+                    else if (numero.trim() === ""){
+                        alert ("Introduce tu numero de estudiante")
+                    }
+                    else if (correo.trim() === ""){
+                        alert ("Introduce tu correo")
+                    }
+                    else if (promedio.trim() === ""){
+                        alert ("Introduce tu promedio")
+                    }else {
+                        if (Number(promedio) < 0 || Number(promedio) >100){
+                            alert("Promedio inválido")
+                        }else{
+                            alert("Hola "+ nombre +", bienvenid@")
+                            alert("Tu correo es " + correo)
+                            alert("Tu promedio es de " + promedio)
+                                if (Number(promedio) >=90){
+                                    alert("APROBADO")
+                                    alert("Desempeño: Excelente")
+                                }else if (Number(promedio) >=70){
+                                    alert("APROBADO")
+                                    alert("Desempeño: Bueno")
+                                }else{
+                                    alert("REPROBADO")
+                                    alert("Desempeño: Necesita mejorar")
+                                } 
+                        } 
+                    }
+            }
+        
+    </script>
+</body>
+</html>

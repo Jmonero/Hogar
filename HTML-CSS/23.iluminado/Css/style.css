@@ -12,14 +12,14 @@ body {
   align-items: center;
   flex-wrap: wrap;
   height: 100vh;
-  background: #520caf;
+  background: #000;
   width: 100%;
 }
 
 h2 {
   font-size: 4em;
   font-weight: 500;
-  color: #5b3ce7f1;
+  color: #222;
   text-transform: uppercase;
   letter-spacing: 5px;
   cursor: pointer;
